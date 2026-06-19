@@ -1,0 +1,390 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* COLORS */
+
+:root{
+
+    --cream:#FFF9F2;
+
+    --light-brown:#be8738;
+
+    --soft-yellow:#ddc776;
+
+    --dark-brown:#614632;
+
+    --white:#beb0b0;
+
+}
+
+/* BODY */
+
+body{
+    background:var(--cream);
+    color:var(--dark-brown);
+}
+
+/* HEADER */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 8%;
+
+    background:rgb(209, 140, 83);
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+}
+
+.logo{
+
+    font-size:1.7rem;
+    font-weight:bold;
+
+}
+
+nav ul{
+
+    display:flex;
+    gap:35px;
+
+    list-style:none;
+}
+
+nav a{
+
+    text-decoration:none;
+    color:var(--dark-brown);
+}
+
+.nav-btn{
+
+    background:var(--light-brown);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 28px;
+
+    border-radius:30px;
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:90vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    padding:80px 8%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #fff8ef,
+    #fff4d7
+    );
+}
+
+.hero-content h1{
+
+    font-size:4rem;
+
+    margin:20px 0;
+}
+
+.hero-content p{
+
+    margin-bottom:35px;
+
+    line-height:1.8;
+}
+
+.hero-image img{
+
+    width:100%;
+}
+
+/* BUTTON */
+
+.primary-btn{
+
+    background:var(--light-brown);
+
+    color:white;
+
+    padding:14px 30px;
+
+    text-decoration:none;
+
+    border-radius:40px;
+}
+
+/* FEATURED */
+
+.featured{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    padding:100px 8%;
+
+    background:white;
+
+    gap:50px;
+}
+
+.featured-image img{
+
+    width:100%;
+}
+
+.featured-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.featured-text h2{
+
+    font-size:2.8rem;
+
+    margin-bottom:20px;
+}
+
+/* PRODUCTS */
+
+.products{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    padding:100px 8%;
+
+    gap:50px;
+}
+
+.product-image img{
+
+    width:100%;
+}
+
+.product-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+/* PROMO */
+
+.promo{
+
+    text-align:center;
+
+    padding:130px 10%;
+
+    background:
+    linear-gradient(
+    rgba(255,248,235,.75),
+    rgba(255,248,235,.75)
+    ),
+
+    url("images/banner-background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.promo h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+}
+
+/* COLLECTION */
+
+.collection{
+
+    padding:100px 8%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:40px;
+}
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+}
+
+.card img{
+
+    width:100%;
+
+    margin-bottom:20px;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+
+    text-align:center;
+
+    padding:100px 8%;
+
+    background:#FFF4D6;
+}
+
+.newsletter h2{
+
+    margin-bottom:15px;
+}
+
+.newsletter form{
+
+    margin-top:30px;
+}
+
+.newsletter input{
+
+    width:350px;
+
+    max-width:90%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:30px;
+}
+
+.newsletter button{
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:var(--light-brown);
+
+    color:white;
+
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:40px;
+
+    padding:80px 8%;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    rgba(173, 113, 52, 0.8),
+    rgba(61, 45, 28, 0.8)
+    ),
+
+    url("img/footer.jpeg");
+
+    background-size: contain;
+
+    background-position: bottom;
+}
+
+.footer-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.footer-column a{
+
+    text-decoration:none;
+
+    color:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero,
+    .featured,
+    .products,
+    footer{
+
+        grid-template-columns:1fr;
+    }
+
+    .collection{
+
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+
+        font-size:2.7rem;
+    }
+
+    nav{
+
+        display:none;
+    }
+}
